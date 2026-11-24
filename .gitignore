@@ -1,0 +1,10 @@
+out/
+out_smoke/
+out_detail/
+.test-out/
+tmp*/
+.venv/
+__pycache__/
+*.pyc
+*.tmp
+dist/
