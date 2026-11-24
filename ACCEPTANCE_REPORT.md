@@ -96,3 +96,17 @@
 2. **详情页未在真实站全量验证**：`--with-detail` 只在 1 页（20 本）桩服务 + 1 次真实站 20 本上跑过，50 页全量会有 1000 次详情请求，未做。
 3. **选择器绑定该站**：站点改版即失效，需同步改 `parse_list_page`。
 4. **图片不校验完整性**：只校验 Content-Type 与大小，不校验 JPEG 是否能解码；坏文件会以正常文件名保存。
+
+---
+
+## 7. 推送上线
+
+- 仓库：https://github.com/You474/books-scraper-demo （新建空仓库，Public）
+- 首次推送：`* [new branch] main -> main`，本地 `9ac3e11` = 远端 HEAD
+- 远端文件数：**18**（源码 2 + 测试 5 + fixtures 3 + 文档 7 + 配置 1）
+
+    $ git rev-parse HEAD         9ac3e1104665f82c7848d3e5044f96203067fd5a
+    $ git rev-parse origin/main  9ac3e1104665f82c7848d3e5044f96203067fd5a
+
+- 未入库（`.gitignore` 生效）：`out/`（40 张封面图 + 导出文件）、`.test-out/`（测试临时目录）、`.venv/`、`__pycache__/`、`tmp*/`
+
